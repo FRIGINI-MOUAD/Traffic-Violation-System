@@ -113,14 +113,6 @@ The database is local and runs on SQL Server installed on my machine.
 
 ---
 
-## 📸 Screenshots
-(Add your screenshots here)
-
-Example:
-![Login Page](screenshots/login.png)
-
----
-
 ## 👨‍💻 Author
 Mouad FRIGINI  
 Computer Science Student  
