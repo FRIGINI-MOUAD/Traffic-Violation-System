@@ -51,7 +51,7 @@ The database is local and runs on SQL Server installed on my machine.
 ---
 
 ## 👨‍💻 Author
-Your Name  
+Mouad FRIGINI  
 Computer Science Student  
 University Name# Traffic Violation Management System
 
