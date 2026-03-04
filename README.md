@@ -53,5 +53,4 @@ The database is local and runs on SQL Server installed on my machine.
 ## 👨‍💻 Author
 Mouad FRIGINI  
 Computer Science Student  
-University Name# Traffic Violation Management System
-
+Wuhan Institute of Technology
