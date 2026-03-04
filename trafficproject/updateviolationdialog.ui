@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UpdateViolationDialog</class>
+ <widget class="QDialog" name="UpdateViolationDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Update Traffic Violation</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+				QDialog { background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #fefce8, stop:1 #fef3c7); }
+				QLabel { color: #92400e; font-weight: bold; font-size: 16px; }
+				QLineEdit, QComboBox, QDoubleSpinBox {
+				padding: 14px; border: 2px solid #fcd34d; border-radius: 12px; font-size: 16px; background: white;
+				}
+				QLineEdit:focus, QComboBox:focus, QDoubleSpinBox:focus { border-color: #f59e0b; }
+				QPushButton#saveButton {
+				background: qlineargradient(x1:0,y1:0,x2:1,y2:0, stop:0 #f59e0b, stop:1 #d97706);
+				color: white; font-weight: bold; font-size: 16px; padding: 14px; border-radius: 12px;
+				}
+				QPushButton#cancelButton {
+				background: #e2e8f0; color: #475569; font-weight: bold; font-size: 16px; padding: 14px; border-radius: 12px;
+				}
+			</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="styleSheet">
+      <string>color: #b45309; font-size: 26px; font-weight: bold; padding: 20px;</string>
+     </property>
+     <property name="text">
+      <string>&lt;h2&gt;Update Violation Record&lt;/h2&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Policy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>50</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Edit Details</string>
+     </property>
+     <layout class="QFormLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="numberlabel">
+        <property name="text">
+         <string>Plate Number:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="plateEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="violationlabel">
+        <property name="text">
+         <string>Violation Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="typeCombo">
+        <item>
+         <property name="text">
+          <string>Speeding</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Illegal Parking</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Red Light Violation</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Using Mobile Phone</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>No Seatbelt</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Improper Lane Change</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="locationlabel">
+        <property name="text">
+         <string>Location:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="locationEdit"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="amountlabel">
+        <property name="text">
+         <string>Fine Amount:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="fineSpinBox">
+        <property name="prefix">
+         <string>$ </string>
+        </property>
+        <property name="minimum">
+         <double>100.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>2000.000000000000000</double>
+        </property>
+        <property name="value">
+         <double>150.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>Update Record</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

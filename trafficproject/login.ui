@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Traffic Violation Management System - Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+				/* Main Window Styling */
+				QMainWindow {
+				background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+				stop:0 #1e3c72, stop:0.5 #2a5298, stop:1 #1e3c72);
+				border-radius: 12px;
+				}
+
+				/* Login Card Styling */
+				QFrame#loginCard {
+				background: rgba(255, 255, 255, 0.95);
+				border-radius: 15px;
+				border: 1px solid #e2e8f0;
+				padding: 20px;
+				}
+
+				/* Label Styling */
+				QLabel {
+				color: #2d3748;
+				font-family: 'Segoe UI', Arial, sans-serif;
+				font-size: 14px;
+				}
+
+				QLabel[objectName=&quot;titleLabel&quot;] {
+				font-size: 24px;
+				font-weight: bold;
+				color: #1e293b;
+				padding: 10px 0px;
+				}
+
+				QLabel[objectName=&quot;logoLabel&quot;] {
+				background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+				stop:0 #3b82f6, stop:1 #1d4ed8);
+				border-radius: 20px;
+				font-size: 40px;
+				color: white;
+				}
+
+				/* Input Field Styling */
+				QLineEdit {
+				background: #f8fafc;
+				border: 2px solid #e2e8f0;
+				border-radius: 8px;
+				padding: 12px 15px;
+				font-size: 14px;
+				color: #2d3748;
+				font-family: 'Segoe UI', Arial, sans-serif;
+				selection-background-color: #3b82f6;
+				}
+
+				QLineEdit:focus {
+				border-color: #3b82f6;
+				background: #ffffff;
+				outline: none;
+				}
+
+				QLineEdit:placeholder {
+				color: #94a3b8;
+				font-style: italic;
+				}
+
+				/* Button Styling */
+				QPushButton {
+				background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+				stop:0 #3b82f6, stop:1 #1d4ed8);
+				color: white;
+				border: none;
+				border-radius: 8px;
+				padding: 14px;
+				font-weight: bold;
+				font-size: 14px;
+				font-family: 'Segoe UI', Arial, sans-serif;
+				}
+
+				QPushButton:hover {
+				background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+				stop:0 #2563eb, stop:1 #1e40af);
+				}
+
+				QPushButton:pressed {
+				background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+				stop:0 #1e40af, stop:1 #1e3a8a);
+				}
+
+				/* Tab Widget Styling */
+				QTabWidget::pane {
+				border: none;
+				background: transparent;
+				margin-top: 10px;
+				}
+
+				QTabWidget::tab-bar {
+				alignment: center;
+				}
+
+				QTabBar::tab {
+				background: transparent;
+				color: #64748b;
+				padding: 12px 24px;
+				margin: 0 2px;
+				border-bottom: 3px solid transparent;
+				font-weight: bold;
+				font-size: 14px;
+				min-width: 100px;
+				}
+
+				QTabBar::tab:selected {
+				color: #3b82f6;
+				border-bottom: 3px solid #3b82f6;
+				background: rgba(59, 130, 246, 0.1);
+				}
+
+				QTabBar::tab:hover:!selected {
+				background: rgba(59, 130, 246, 0.05);
+				color: #475569;
+				}
+
+				/* Link Label Styling */
+				QLabel[objectName=&quot;forgotPasswordLabel&quot;] {
+				color: #3b82f6;
+				font-size: 13px;
+				}
+
+				QLabel[objectName=&quot;forgotPasswordLabel&quot;]:hover {
+				color: #2563eb;
+				text-decoration: underline;
+				}
+
+				/* Footer Label */
+				QLabel[objectName=&quot;label&quot;] {
+				color: #64748b;
+				font-size: 12px;
+				font-style: italic;
+				}
+			</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="loginCard">
+      <property name="minimumSize">
+       <size>
+        <width>380</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>400</width>
+        <height>900</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="titleLabel">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>
+											&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+											&lt;p style=&quot;margin: 10px 0px;&quot;&gt;Traffic Violation&lt;/p&gt;
+											&lt;p style=&quot;font-size: 16px; color: #64748b; margin: 5px 0px;&quot;&gt;Management System&lt;/p&gt;
+											&lt;/body&gt;&lt;/html&gt;
+										</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTabWidget" name="loginTabs">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>500</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>550</height>
+          </size>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="loginTab">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>500</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>500</height>
+           </size>
+          </property>
+          <attribute name="title">
+           <string>Login</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="bottomMargin">
+              <number>22</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="usernameLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Email</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="usernameTextBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>42</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Enter your username</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="passwordLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="passwordBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>42</height>
+                </size>
+               </property>
+               <property name="echoMode">
+                <enum>QLineEdit::EchoMode::Password</enum>
+               </property>
+               <property name="placeholderText">
+                <string>Enter your password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="forgotPasswordLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Forgot Password?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignRight</set>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignmentFlag::AlignVCenter">
+              <widget class="QPushButton" name="loginButton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Login</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+              <widget class="QLabel" name="label">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Secure Access • Traffic Management</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="signupTab">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>650</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>650</height>
+           </size>
+          </property>
+          <attribute name="title">
+           <string>Sign Up</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <property name="sizeConstraint">
+              <enum>QLayout::SizeConstraint::SetFixedSize</enum>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="nationalIdLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>National ID</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="signupNationalIdTextBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Enter your national ID</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="phoneLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Phone Number</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="signupPhoneTextBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Enter your phone number</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="emailLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Email</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="signupEmailTextBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Enter your email address</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="signupPasswordLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="signupPasswordBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="echoMode">
+                <enum>QLineEdit::EchoMode::Password</enum>
+               </property>
+               <property name="placeholderText">
+                <string>Create a password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="confirmPasswordLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Confirm Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="signupConfirmPasswordBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="echoMode">
+                <enum>QLineEdit::EchoMode::Password</enum>
+               </property>
+               <property name="placeholderText">
+                <string>Confirm your password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="signupButton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Create Account</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

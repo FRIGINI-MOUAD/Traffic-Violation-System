@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddViolationDialog</class>
+ <widget class="QDialog" name="AddViolationDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>586</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add New Traffic Violation</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+				QDialog { background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f0f9ff, stop:1 #e0f2fe); }
+				QLabel { color: #1e40af; font-weight: bold; font-size: 16px; }
+				QLineEdit, QComboBox, QDoubleSpinBox {
+				padding: 14px;
+				border: 2px solid #bae6fd;
+				border-radius: 12px;
+				font-size: 16px;
+				background: white;
+				}
+				QLineEdit:focus, QComboBox:focus, QDoubleSpinBox:focus { border-color: #0ea5e9; }
+				QPushButton#saveButton {
+				background: qlineargradient(x1:0,y1:0,x2:1,y2:0, stop:0 #10b981, stop:1 #059669);
+				color: white; font-weight: bold; font-size: 16px; padding: 14px; border-radius: 12px;
+				}
+				QPushButton#cancelButton {
+				background: #e2e8f0; color: #475569; font-weight: bold; font-size: 16px; padding: 14px; border-radius: 12px;
+				}
+			</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="styleSheet">
+      <string>color: #1e40af; font-size: 26px; font-weight: bold; padding: 20px;</string>
+     </property>
+     <property name="text">
+      <string>&lt;h2&gt;Record New Traffic Violation&lt;/h2&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Violation Details</string>
+     </property>
+     <layout class="QFormLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_plate">
+        <property name="text">
+         <string>Plate Number:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="plateEdit">
+        <property name="inputMask">
+         <string>&gt;AAAA9999</string>
+        </property>
+        <property name="placeholderText">
+         <string>AB1234</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_type">
+        <property name="text">
+         <string>Violation Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="userCombo">
+        <item>
+         <property name="text">
+          <string>Speeding</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Illegal Parking</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Red Light Violation</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Using Mobile Phone</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>No Seatbelt</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Improper Lane Change</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_location">
+        <property name="text">
+         <string>Location:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="locationEdit">
+        <property name="placeholderText">
+         <string>e.g. Nathan Road, Tsim Sha Tsui</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_fine">
+        <property name="text">
+         <string>Fine Amount:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="fineSpinBox">
+        <property name="prefix">
+         <string>$ </string>
+        </property>
+        <property name="suffix">
+         <string> .00</string>
+        </property>
+        <property name="minimum">
+         <double>100.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>2000.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>50.000000000000000</double>
+        </property>
+        <property name="value">
+         <double>150.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>Add Violation</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

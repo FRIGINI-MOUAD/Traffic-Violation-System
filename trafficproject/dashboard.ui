@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+	<class>Dashboard</class>
+	<widget class="QMainWindow" name="Dashboard">
+		<property name="geometry">
+			<rect>
+				<x>0</x>
+				<y>0</y>
+				<width>1200</width>
+				<height>800</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>Traffic Violation Management System</string>
+		</property>
+		<property name="styleSheet">
+			<string notr="true">
+				/* Main Window */
+				QMainWindow {
+				background: #f8fafc;
+				font-family: 'Segoe UI', Arial, sans-serif;
+				}
+
+				/* Sidebar Styling */
+				QFrame#sidebar {
+				background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+				stop:0 #1e293b, stop:1 #0f172a);
+				border: none;
+				}
+
+				QPushButton {
+				background: transparent;
+				color: #cbd5e1;
+				border: none;
+				border-radius: 8px;
+				padding: 12px 15px;
+				margin: 4px 8px;
+				text-align: left;
+				font-size: 14px;
+				font-weight: normal;
+				}
+
+				QPushButton:hover {
+				background: #334155;
+				color: #ffffff;
+				}
+
+				QPushButton:pressed {
+				background: #3b82f6;
+				}
+
+				QPushButton[objectName="logoButton"] {
+				background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+				stop:0 #3b82f6, stop:1 #1d4ed8);
+				color: white;
+				font-size: 18px;
+				font-weight: bold;
+				text-align: center;
+				padding: 15px;
+				margin: 10px 8px;
+				}
+
+				QPushButton[objectName="logoutButton"] {
+				background: #dc2626;
+				color: white;
+				margin-top: auto;
+				}
+
+				QPushButton[objectName="logoutButton"]:hover {
+				background: #b91c1c;
+				}
+
+				/* Remove the overly broad QWidget rule - it was breaking child widgets */
+				/* Instead, only style the centralwidget specifically */
+				QWidget#centralwidget {
+				background: #ffffff;
+				}
+
+				QLabel {
+				color: #1e293b;
+				font-size: 24px;
+				font-weight: bold;
+				padding: 20px;
+				}
+			</string>
+		</property>
+		<widget class="QWidget" name="centralwidget">
+			<layout class="QHBoxLayout" name="horizontalLayout">
+				<item>
+					<widget class="QFrame" name="sidebar">
+						<property name="minimumSize">
+							<size>
+								<width>250</width>
+								<height>0</height>
+							</size>
+						</property>
+						<property name="maximumSize">
+							<size>
+								<width>280</width>
+								<height>16777215</height>
+							</size>
+						</property>
+						<layout class="QVBoxLayout" name="sidebarLayout">
+							<item alignment="Qt::AlignmentFlag::AlignHCenter">
+								<widget class="QPushButton" name="logoButton">
+									<property name="text">
+										<string>🛡️ TVM System</string>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<widget class="QPushButton" name="dashboardBtn">
+									<property name="text">
+										<string>📊 Dashboard</string>
+									</property>
+									<property name="checkable">
+										<bool>true</bool>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<widget class="QPushButton" name="reportBtn">
+									<property name="styleSheet">
+										<string notr="true">
+											QPushButton:checked {
+											background: #3b82f6;
+											color: white;
+											font-weight: bold;
+											}
+										</string>
+									</property>
+									<property name="text">
+										<string>📈 Report</string>
+									</property>
+									<property name="checkable">
+										<bool>true</bool>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<spacer name="verticalSpacer">
+									<property name="orientation">
+										<enum>Qt::Orientation::Vertical</enum>
+									</property>
+									<property name="sizeHint" stdset="0">
+										<size>
+											<width>20</width>
+											<height>40</height>
+										</size>
+									</property>
+								</spacer>
+							</item>
+							<item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+								<widget class="QPushButton" name="logoutButton">
+									<property name="minimumSize">
+										<size>
+											<width>0</width>
+											<height>0</height>
+										</size>
+									</property>
+									<property name="maximumSize">
+										<size>
+											<width>16777215</width>
+											<height>100</height>
+										</size>
+									</property>
+									<property name="text">
+										<string>⬅ Logout</string>
+									</property>
+								</widget>
+							</item>
+						</layout>
+					</widget>
+				</item>
+				<item>
+					<widget class="QStackedWidget" name="stackedWidget"/>
+				</item>
+			</layout>
+		</widget>
+	</widget>
+	<resources/>
+	<connections/>
+</ui>

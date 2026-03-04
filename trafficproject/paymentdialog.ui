@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PaymentDialog</class>
+ <widget class="QDialog" name="PaymentDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>570</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Payment - Traffic Fine</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+				QDialog { background-color: #f8fafc; }
+				QLabel { font-size: 11px; }
+				QGroupBox { font-size: 12px; font-weight: bold; padding-top: 8px; }
+				QGroupBox::title { subcontrol-origin: margin; subcontrol-position: top left; padding: 2px 5px; }
+				QLineEdit, QComboBox { padding: 6px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 12px; }
+				QPushButton#payButton { background-color: #10b981; color: white; font-weight: bold; padding: 8px; border-radius: 6px; font-size: 13px; }
+				QPushButton#payButton:hover { background-color: #059669; }
+				QPushButton#cancelButton { background-color: #ef4444; color: white; font-weight: bold; padding: 8px; border-radius: 6px; font-size: 13px; }
+				QPushButton#cancelButton:hover { background-color: #dc2626; }
+			</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>8</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>8</number>
+   </property>
+   <item alignment="Qt::AlignmentFlag::AlignVCenter">
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>&lt;h4 style='margin:0;'&gt;Pay Traffic Fine&lt;/h4&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Violation Details</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>12</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>5</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_1">
+        <property name="text">
+         <string>Reference:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="refLabel">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>VIO-1234567</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Plate:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="plateLabel">
+        <property name="text">
+         <string>ABC-123</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Offence:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="offenceLabel">
+        <property name="text">
+         <string>Speeding</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Location:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="locationLabel">
+        <property name="text">
+         <string>Downtown Highway</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>&lt;b&gt;Amount:&lt;/b&gt;</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::TextFormat::RichText</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="amountLabel">
+        <property name="styleSheet">
+         <string notr="true">color: #dc2626; font-weight: bold; font-size: 15px;</string>
+        </property>
+        <property name="text">
+         <string>$150.00 </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Payment Method</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QComboBox" name="cardTypeCombo">
+        <item>
+         <property name="text">
+          <string>MasterCard</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Visa</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Credit Card</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="cardNumberEdit">
+        <property name="maxLength">
+         <number>19</number>
+        </property>
+        <property name="placeholderText">
+         <string>Card Number</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="expiryEdit">
+          <property name="maxLength">
+           <number>5</number>
+          </property>
+          <property name="placeholderText">
+           <string>MM/YY</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="cvvEdit">
+          <property name="maxLength">
+           <number>4</number>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>CVV</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="cardHolderEdit">
+        <property name="placeholderText">
+         <string>Cardholder Name</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <property name="spacing">
+      <number>8</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="payButton">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Pay Now</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>PaymentDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

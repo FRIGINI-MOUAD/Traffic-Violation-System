@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d8607008bdaf5fad766f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "trafficproject",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "trafficproject::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trafficproject-Release-05448b70b18b8d530763.json",
+					"name" : "trafficproject",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trafficproject_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trafficproject_autogen-Release-902a85d1bb3cb8a3bef8.json",
+					"name" : "trafficproject_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trafficproject_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trafficproject_autogen_timestamp_deps-Release-9aca78e5cd0e3b9269d7.json",
+					"name" : "trafficproject_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/mouad/Desktop/mouad/trafficproject/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release",
+		"source" : "C:/Users/mouad/Desktop/mouad/trafficproject"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

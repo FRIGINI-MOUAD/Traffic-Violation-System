@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserDashboard</class>
+ <widget class="QWidget" name="UserDashboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1064</width>
+    <height>703</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>703</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>User Dashboard – Traffic Violation Management System</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LayoutDirection::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget { background:#f8fafc; font-family:'Segoe UI',Arial,sans-serif; }
+    QLabel#titleLabel { color:#1e293b; font-size:28px; font-weight:bold; padding:20px 0px; }
+    QPushButton { background:qlineargradient(x1:0,y1:0,x2:1,y2:0,
+                      stop:0 #3b82f6, stop:1 #1d4ed8);
+                  color:white; border:none; border-radius:8px;
+                  padding:10px 15px; font-weight:bold; font-size:14px; min-width:80px; }
+    QPushButton:hover { background:qlineargradient(x1:0,y1:0,x2:1,y2:0,
+                      stop:0 #2563eb, stop:1 #1e40af); }
+    QLineEdit { background:#fff; border:2px solid #e2e8f0; border-radius:8px;
+                padding:10px 15px; font-size:14px; color:#2d3748; min-height:40px; }
+    QLineEdit:focus { border-color:#3b82f6; }
+    QLineEdit::placeholder { color:#94a3b8; font-style:italic; }
+    QGroupBox { background:qlineargradient(x1:0,y1:0,x2:1,y2:0,
+                stop:0 #fff, stop:1 #f8fafc);
+                border:2px solid #e2e8f0; border-radius:12px;
+                margin-top:10px; padding-top:15px; font-weight:bold; color:#475569; }
+    QGroupBox::title { subcontrol-origin:margin; subcontrol-position:top center;
+                       padding:0px 10px; background:transparent; color:#64748b; font-size:14px; }
+    QLabel#totalLabel, QLabel#pendingLabel, QLabel#paidLabel {
+        color:#3b82f6; font-size:32px; font-weight:bold; text-align:center; }
+    QTableView { background:#fff; border:1px solid #e2e8f0; border-radius:8px; }
+    QHeaderView::section { background:qlineargradient(x1:0,y1:0,x2:1,y2:0,
+                stop:0 #1e293b, stop:1 #334155);
+                color:white; padding:8px; font-weight:bold; }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>6</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame_2">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="Titlelabel">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Citizen Dashboard&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame_3">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>95</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>95</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>6</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+         <widget class="QPushButton" name="payButton">
+          <property name="minimumSize">
+           <size>
+            <width>110</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Pay Selected Fine</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+         <widget class="QLineEdit" name="searchEdit">
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>64</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>500</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="placeholderText">
+           <string>Search by plate, type or location…</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+         <widget class="QPushButton" name="searchButton">
+          <property name="minimumSize">
+           <size>
+            <width>110</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>110</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Search</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="topMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+         <widget class="QGroupBox" name="totalBox">
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>121</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>121</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Total Violations</string>
+          </property>
+          <layout class="QVBoxLayout">
+           <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+            <widget class="QLabel" name="totalLabel">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>75</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+         <widget class="QGroupBox" name="pendingBox">
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>121</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>121</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Pending Fines</string>
+          </property>
+          <layout class="QVBoxLayout">
+           <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+            <widget class="QLabel" name="pendingLabel">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>75</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>$0</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignVCenter">
+    <widget class="QGroupBox" name="violationsTableBox">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>346</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>346</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Your Violation Records</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <item alignment="Qt::AlignmentFlag::AlignVCenter">
+       <widget class="QTableView" name="tableView">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>302</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
